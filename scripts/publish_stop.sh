@@ -32,7 +32,7 @@ if [[ -f $onpidfi ]]; then
 fi
 
 errcho "[$me] Starting offline stream..."
-ffmpeg -loglevel warning -stream_loop -1 -re -i "$DIR"/"$offfi" -c copy -f mpegts pipe:1 > $pfi &
+ffmpeg -loglevel warning -stream_loop -1 -re -i "$offfi" -c copy -f mpegts pipe:1 > $pfi &
 offpid=$!
 errcho "[$me] Offline stream pid $offpid"
 echo $offpid > $offpidfi

@@ -32,4 +32,4 @@ COPY  scripts/ /usr/local/nginx/scripts/
 COPY  *.conf /usr/local/nginx/conf/
 
 
-CMD ["/bin/sh" , "-c" , "echo $NAME > /usr/local/nginx/scripts/name.param && echo $DEST > /usr/local/nginx/scripts/dest.param && exec /usr/local/nginx/sbin/nginx -g 'daemon off;'"]
+CMD ["/bin/sh" , "-c" , "echo $NAME > /usr/local/nginx/scripts/name.param && echo $DEST > /usr/local/nginx/scripts/dest.param && echo $TIMEOUT > /usr/local/nginx/scripts/timeout.param && exec /usr/local/nginx/sbin/nginx -g 'daemon off;'"]
